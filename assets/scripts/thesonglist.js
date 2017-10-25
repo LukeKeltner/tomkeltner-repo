@@ -1,0 +1,16 @@
+$.ajax(
+{
+	url: '/api/thesonglist',
+	type: 'GET'
+}).done(function(data)
+{
+	
+	tBody = $('#table-body');
+	for (var i=0; i<data.length; i++)
+	{
+		insert = $("<tr><td>"+data[i].title+"</td><td>"+data[i].artist+"</td><td>"+data[i].genre+"</td><td>"+data[i].year+"</td></tr>")
+		tBody.append(insert)
+	}
+
+	 $('#thesonglist-table').DataTable();
+})

@@ -5,9 +5,18 @@ var songListPath = path.join(__dirname, "..", "data", "thesonglist.json");
 
 var router = express.Router();
 
-/*router.get("/", function(req, res)
+router.get("/api/thesonglist", function(req, res)
 {
-	res.end()
-})*/
+	fs.readJson(songListPath)
+	.then(function(list)
+	{
+		console.log(list)
+		res.json(list);
+	})
+	.catch(function(err)
+	{
+		console.log(err);
+	})
+})
 
 module.exports = router;
