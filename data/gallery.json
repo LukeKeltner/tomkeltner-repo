@@ -1,0 +1,32 @@
+[
+	{
+		"src": "assets/images/1.jpg",
+		"title": "Title of Pic 1",
+		"info": "Some info for pic 1"
+	},
+	{
+		"src": "assets/images/2.jpg",
+		"title": "Title of Pic 2",
+		"info": "Some info for pic 2"
+	},
+	{
+		"src": "assets/images/3.jpg",
+		"title": "Title of Pic 3",
+		"info": "Some info for pic 3"
+	},
+	{
+		"src": "assets/images/4.png",
+		"title": "Title of Pic 4",
+		"info": "Some info for pic 4"
+	},
+	{
+		"src": "assets/images/5.png",
+		"title": "Title of Pic 5",
+		"info": "Some info for pic 5"
+	},
+	{
+		"src": "assets/images/6.png",
+		"title": "Title of Pic 6",
+		"info": "Some info for pic 6"
+	}
+]

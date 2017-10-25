@@ -4,7 +4,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link href="assets/css/index.css" rel="stylesheet"/>
-	<link href="assets/css/gallery.css" rel="stylesheet"/>
 	<title>Gallery</title>
 </head>
 <body>
@@ -12,36 +11,45 @@
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<h4>
-					<a href="/"><button type="button" class="btn btn-outline-primary options">Home</button></a>
-					<a href="thesonglist"><button type="button" class="btn btn-outline-primary options">The Song List</button></a>
-					<button type="button" class="btn btn-outline-primary options">Bio</button>
-					<a href="gallery"><button type="button" class="btn btn-outline-primary options">Gallery</button></a>
-					<button type="button" class="btn btn-outline-primary options">Media</button>
-					<button type="button" class="btn btn-outline-primary options">Resume</button>
-					<button type="button" class="btn btn-outline-primary options">Contact</button>
+					<a href="/"><button type="button" class="btn btn-outline-dark options">Home</button></a>
+					<a href="thesonglist"><button type="button" class="btn btn-outline-dark options">The Song List</button></a>
+					<button type="button" class="btn btn-outline-dark options">Bio</button>
+					<a href="gallery"><button type="button" class="btn btn-outline-dark options">Gallery</button></a>
+					<button type="button" class="btn btn-outline-dark options">Media</button>
+					<button type="button" class="btn btn-outline-dark options">Resume</button>
+					<button type="button" class="btn btn-outline-dark options">Contact</button>
 				</h4>
 			</div>
 		</div>
-		<div class="row text-center">
-				<div class="col-md-4"><img src="assets/images/1.jpg"/></div>
-				<div class="col-md-4"><img src="assets/images/2.jpg"/></div>
-				<div class="col-md-4"><img src="assets/images/3.jpg"/></div>
-		</div>
+		<div id="image-container">
 
-		<div class="row text-center">
-				<div class="col-md-4"><img src="assets/images/4.png"/></div>
-				<div class="col-md-4"><img src="assets/images/5.png"/></div>
-				<div class="col-md-4"><img src="assets/images/6.png"/></div>
 		</div>
 
 
+	</div>
+
+	<img src="assets/images/mic.png" id="mic"/>
 
 
 
 
 
-
-
+	<div class="modal fade" id="show-pic" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal-title"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" id="modal-img">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
@@ -57,6 +65,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="assets/scripts/gallery.js"></script>
+	<link href="assets/css/gallery.css" rel="stylesheet"/>
 
 </body>
 </html>

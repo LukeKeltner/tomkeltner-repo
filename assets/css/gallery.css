@@ -4,7 +4,17 @@ img
 	display: inline-block;
 }
 
-img:hover
+.card:hover
 {
-	box-shadow: 0 30px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card
+{
+	margin-top: 20px;
+}
+
+#thesonglist-table
+{
+	background-color: red;
 }
