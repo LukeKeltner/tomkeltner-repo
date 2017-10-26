@@ -3,25 +3,32 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 	<link href="assets/css/index.css" rel="stylesheet"/>
 	<link href="assets/css/thesonglist.css" rel="stylesheet" />
 	<title>The Song List</title>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<h4>
-					<a href="/"><button type="button" class="btn btn-outline-dark options">Home</button></a>
-					<a href="thesonglist"><button type="button" class="btn btn-outline-dark options">The Song List</button></a>
-					<button type="button" class="btn btn-outline-dark options">Bio</button>
-					<a href="gallery"><button type="button" class="btn btn-outline-dark options">Gallery</button></a>
-					<button type="button" class="btn btn-outline-dark options">Media</button>
-					<button type="button" class="btn btn-outline-dark options">Resume</button>
-					<button type="button" class="btn btn-outline-dark options">Contact</button>
-				</h4>
+	<div class="container-fluid">
+		<div class="row text-center" style="align-items:center;" id="logo">
+			<h1>Tom Keltner Sings the Classics</h1>
+			<!-- <img id="hat" class="pull-right" src="assets/images/fedora.png"/> -->
+		</div>
+		<div class="row text-center" id="options">
+			<div class="col-sm-12">
+				<div id="options-text">
+					<a href="/"><button type="button" class="btn btn-outline-light options">Home</button></a>
+					<a href="thesonglist"><button type="button" class="btn btn-outline-light options">The Song List</button></a>
+					<button type="button" class="btn btn-outline-light options">Bio</button>
+					<a href="gallery"><button type="button" class="btn btn-outline-light options">Gallery</button></a>
+					<button type="button" class="btn btn-outline-light options">Media</button>
+					<button type="button" class="btn btn-outline-light options">References</button>
+					<button type="button" class="btn btn-outline-light options">Contact</button>
+				</div>
 			</div>
 		</div>
+	</div>
+	<div class="container">
 
 		<div class="row">
 			<div class="col-md-12">
@@ -48,16 +55,7 @@
 					</tfoot>
 				</table>
 			</div>
-
-
 		</div>
-
-
-
-
-
-
-
 	</div>
 
 	<img src="assets/images/mic.png" id="mic"/>

@@ -1,5 +1,6 @@
 body
 {
+	font-family: 'Libre Baskerville', serif;
 	margin-bottom: 30px;
 
 
@@ -30,18 +31,16 @@ body
 	margin-bottom:20px;
 }
 
-#bugsbunny
+#dad
 {
 	width:100%;
-	clear:both;
+	border: 1px solid #343a40;
 }
 
 
 .options
 {
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: 5px;
+	margin:5px;
 }
 
 #mic
