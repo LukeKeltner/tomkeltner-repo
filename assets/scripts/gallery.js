@@ -28,13 +28,12 @@ $.ajax(
 			if (picNumber < data.length)
 			{
 				var newCol = $("<div class='col-md-3'>")
-				var newCard = $("<div class='card text-white bg-dark mb-3 text-center' index='"+picNumber+"' >"
-							+"<img class='card-img-top' src='"+data[picNumber].src+"' alt='Card image cap'>"
-							+"<div class='card-body'>"
-								+"<h4 class='card-title'>"+data[picNumber].title+"</h4>"
-								+"<p class='card-text'>"+data[picNumber].info+"</p>"
-							+"</div>"
-						+"</div>");
+				var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"' style='height:250px; overflow:hidden;'>"
+							+"<img class='card-img' src='"+data[picNumber].src+"' alt='Card image' style='width:500px;'/>"
+							  	+"<div class='card-img-overlay'>"
+							    +"<h4 class='card-text'><div style='background-color: rgba(0, 0, 0, 0.5);border-radius: 4px;'>"+data[picNumber].title+"</div></h4>"
+							  +"</div>"
+							+"</div>");
 
 				newCol.append(newCard)
 				newRow.append(newCol)

@@ -17,6 +17,11 @@ router.get("/:location?", function(req, res)
 		res.sendFile(path.join(__dirname, "..", "public", "gallery.html"));
 	}
 
+	else if (chosen === "contact")
+	{
+		res.sendFile(path.join(__dirname, "..", "public", "contact.html"));
+	}
+
 	else
 	{
 		res.sendFile(path.join(__dirname, "..", "public", "index.html"));
