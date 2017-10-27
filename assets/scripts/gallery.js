@@ -19,24 +19,46 @@ $.ajax(
 
 	var picNumber = 0;
 
-	for (var i=0; i<amountOfRows; i++)
+	var newDeck = $('<div class="card-columns">')
+	for (var i=0; i<data.length; i++)
+	{
+		var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"''>"
+				  						+"<img class='card-img-top' src='"+data[picNumber].src+"'' alt='Card image cap'/>"
+				  						+"<div class='card-body'>"
+				    						+"<h5 class='card-title'>"+data[picNumber].title+"</h5>"
+				 						+"</div>"
+									+"</div>");
+
+		newDeck.append(newCard)
+		picNumber = picNumber + 1;
+	}
+
+	$('#image-container').append(newDeck)
+
+/*	for (var i=0; i<amountOfRows; i++)
 	{
 		var newRow = $("<div class='row'>")
+		var newDeck = $('<div class="card-columns">')
+
 		
 		for (var j=0; j<4; j++)
 		{
 			if (picNumber < data.length)
 			{
 				var newCol = $("<div class='col-md-3'>")
-				var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"' style='height:250px; overflow:hidden;'>"
-							+"<img class='card-img' src='"+data[picNumber].src+"' alt='Card image' style='width:500px;'/>"
-							  	+"<div class='card-img-overlay'>"
-							    +"<h4 class='card-text'><div style='background-color: rgba(0, 0, 0, 0.5);border-radius: 4px;'>"+data[picNumber].title+"</div></h4>"
-							  +"</div>"
-							+"</div>");
+				var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"''>"
+				  						+"<img class='card-img-top' src='"+data[picNumber].src+"'' alt='Card image cap'/>"
+				  						+"<div class='card-body'>"
+				    						+"<h5 class='card-title'>"+data[picNumber].title+"</h5>"
+				 						+"</div>"
+				      					+"<div class='card-footer'>"
+				      						+"<small class='text-muted'>Last updated 3 mins ago</small>"
+				    					+"</div>"
+									+"</div>");
 
 				newCol.append(newCard)
-				newRow.append(newCol)
+				newDeck.append(newCol)
+				newRow.append(newDeck)
 				picNumber = picNumber + 1;
 			}
 
@@ -47,7 +69,7 @@ $.ajax(
 		}
 
 		$('#image-container').append(newRow)
-	}
+	}*/
 })
 
 $(document).on("click", ".card", function(event)
@@ -57,3 +79,4 @@ $(document).on("click", ".card", function(event)
 	$('#modal-img').html("<img src='"+pics[index].src+"' style='width:100%;'/>")
 	$('#show-pic').modal("show");
 })
+

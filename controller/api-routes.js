@@ -37,7 +37,7 @@ router.get("/api/gallery", function(req, res)
 
 router.post("/submit", function(req, res)
 {
-	console.log(req.route)
+	console.log(req.body)
 })
 
 module.exports = router;

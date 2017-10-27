@@ -22,6 +22,11 @@ router.get("/:location?", function(req, res)
 		res.sendFile(path.join(__dirname, "..", "public", "contact.html"));
 	}
 
+	else if (chosen === "references")
+	{
+		res.sendFile(path.join(__dirname, "..", "public", "references.html"));
+	}
+
 	else
 	{
 		res.sendFile(path.join(__dirname, "..", "public", "index.html"));
