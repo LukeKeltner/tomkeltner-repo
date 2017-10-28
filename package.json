@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/LukeKeltner/tomkeltner-repo#readme",
   "dependencies": {
-    "express": "^4.16.2",
-    "fs-extra": "^4.0.2"
+    "express": "4.16.2",
+    "fs-extra": "4.0.2",
+    "nodemailer": "4.3.1"
   }
 }

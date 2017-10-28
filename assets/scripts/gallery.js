@@ -22,9 +22,9 @@ $.ajax(
 	var newDeck = $('<div class="card-columns">')
 	for (var i=0; i<data.length; i++)
 	{
-		var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"''>"
-				  						+"<img class='card-img-top' src='"+data[picNumber].src+"'' alt='Card image cap'/>"
-				  						+"<div class='card-body'>"
+		var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"'>"
+				  						+"<img class='card-img-top' src='"+data[picNumber].src+"' alt='Card image cap'/>"
+				  						+"<div class='card-body' style='border-top:1px solid white'>"
 				    						+"<h5 class='card-title'>"+data[picNumber].title+"</h5>"
 				 						+"</div>"
 									+"</div>");
