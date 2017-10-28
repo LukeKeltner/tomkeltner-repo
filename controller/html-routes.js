@@ -27,6 +27,11 @@ router.get("/:location?", function(req, res)
 		res.sendFile(path.join(__dirname, "..", "public", "references.html"));
 	}
 
+	else if (chosen === "pricing")
+	{
+		res.sendFile(path.join(__dirname, "..", "public", "pricing.html"));
+	}
+
 	else
 	{
 		res.sendFile(path.join(__dirname, "..", "public", "index.html"));

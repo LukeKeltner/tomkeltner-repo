@@ -59,8 +59,7 @@ router.post("/submit", function(req, res)
 	var mailOptions = 
 	{
 		from: 'luketotom@gmail.com',
-/*		to: 'tomrkeltner@yahoo.com',*/
-		to: 'lukekeltner@yahoo.com',
+		to: 'tomrkeltner@yahoo.com',
 		subject: req.body.subject,
 		text: message
 	};
