@@ -59,7 +59,8 @@ router.post("/submit", function(req, res)
 	var mailOptions = 
 	{
 		from: 'luketotom@gmail.com',
-		to: 'tomrkeltner@yahoo.com',
+/*		to: 'tomrkeltner@yahoo.com',*/
+		to: 'lukekeltner@yahoo.com',
 		subject: req.body.subject,
 		text: message
 	};
@@ -69,10 +70,13 @@ router.post("/submit", function(req, res)
 		if (error) 
 		{
 			console.log(error);
+			res.send("Error")
 		} 
+
 		else 
 		{
 			console.log('Email sent: ' + info.response);
+			res.send("")
 		}
 	});
 })

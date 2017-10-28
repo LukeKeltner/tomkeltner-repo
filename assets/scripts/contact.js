@@ -24,6 +24,19 @@ $("#submit-email").on("submit", function(event)
 		data: data
 	}).then(function(response)
 	{
+		if (response === "Error")
+		{
+			$("#email-error").show()
+		}
+
+		else
+		{
+			$('#email-sent').modal("show")
+			$('#name').val("");
+			$('#email').val("");
+			$('#subject').val("");
+			$('#message').val("");
+		}
 		
 	})
 

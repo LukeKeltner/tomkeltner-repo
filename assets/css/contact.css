@@ -9,3 +9,13 @@
 	font-size: 20px;
 	display: inline;
 }
+
+#email-sent
+{
+	display:none;
+}
+
+#email-error
+{
+	display: none;
+}
