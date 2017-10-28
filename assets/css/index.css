@@ -12,6 +12,15 @@ body
  	background: radial-gradient(circle, #ffffff, #bababa); /* Standard syntax */
 }
 
+#tkstc
+{
+	font-family: 'Cinzel', serif;
+	font-size: 50px;
+	font-weight: bold;
+	color:#ff2626;
+	text-shadow: 0px 0px 0px black, 0 2px 4px black;
+}
+
 #logo
 {
 	color: #343a40;
