@@ -10,16 +10,13 @@ var router = express.Router();
 var transporter = nodemailer.createTransport(
 {
 
-/*	host: "smtp.gmail.com",
-	secureConnection: false,
+	host: "smtp.gmail.com",
+	secure: false,
 	port: 587,
-	requiresAuth: true,
-	domains: ["gmail.com", "googlemail.com"],*/
-	service: 'yahoo',
-	auth: 
+	auth:
 	{
-		user: 'lukekeltner@yahoo.com',
-		pass: 'Lukkehoday1'
+		user: 'luketotom@gmail.com',
+		pass: 'cvoyhqbnalkvltlr'
 	}
 });
 
@@ -54,12 +51,17 @@ router.get("/api/gallery", function(req, res)
 router.post("/submit", function(req, res)
 {
 	console.log(req.body)
+
+	var message = req.body.message+"\n"
+	+"Contact's Name: "+req.body.name+"\n"
+	+"Contact's Email: "+req.body.email
+
 	var mailOptions = 
 	{
-		from: req.body.email,
+		from: 'luketotom@gmail.com',
 		to: 'lukekeltner@yahoo.com',
 		subject: req.body.subject,
-		text: req.body.message
+		text: message
 	};
 
 	transporter.sendMail(mailOptions, function(error, info)
