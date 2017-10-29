@@ -19,7 +19,7 @@ $.ajax(
 
 	var picNumber = 0;
 
-	var newDeck = $('<div class="card-columns">')
+/*	var newDeck = $('<div class="card-deck">')
 	for (var i=0; i<data.length; i++)
 	{
 		var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"'>"
@@ -33,12 +33,12 @@ $.ajax(
 		picNumber = picNumber + 1;
 	}
 
-	$('#image-container').append(newDeck)
+	$('#image-container').append(newDeck)*/
 
-/*	for (var i=0; i<amountOfRows; i++)
+	for (var i=0; i<amountOfRows; i++)
 	{
 		var newRow = $("<div class='row'>")
-		var newDeck = $('<div class="card-columns">')
+		var newDeck = $('<div class="card-deck">')
 
 		
 		for (var j=0; j<4; j++)
@@ -51,14 +51,9 @@ $.ajax(
 				  						+"<div class='card-body'>"
 				    						+"<h5 class='card-title'>"+data[picNumber].title+"</h5>"
 				 						+"</div>"
-				      					+"<div class='card-footer'>"
-				      						+"<small class='text-muted'>Last updated 3 mins ago</small>"
-				    					+"</div>"
 									+"</div>");
 
-				newCol.append(newCard)
-				newDeck.append(newCol)
-				newRow.append(newDeck)
+				newDeck.append(newCard)
 				picNumber = picNumber + 1;
 			}
 
@@ -67,9 +62,9 @@ $.ajax(
 				break;
 			}
 		}
-
+		newRow.append(newDeck)
 		$('#image-container').append(newRow)
-	}*/
+	}
 })
 
 $(document).on("click", ".card", function(event)

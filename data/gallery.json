@@ -1,32 +1,42 @@
 [
 	{
-		"src": "assets/images/Tom-01web.jpg",
-		"title": "Photoshoot Fun",
+		"src": "assets/images/10.jpg",
+		"title": "Singing Frank Sinatra's , 'Come Fly with Me'",
 		"info": "Some info for pic 1"
 	},
 	{
-		"src": "assets/images/singing.jpg",
-		"title": "Performing at Laff's",
-		"info": "Some info for pic 2"
-	},
-	{
-		"src": "assets/images/Tom-08web.jpg",
-		"title": "Photoshoot Fun",
+		"src": "assets/images/8.jpg",
+		"title": "Singing Cabaret's 'Maybe This Time'",
 		"info": "Some info for pic 3"
 	},
 	{
-		"src": "assets/images/tattoo.jpg",
-		"title": "Performing at Laff's",
-		"info": "Some info for pic 4"
-	},
-	{
-		"src": "assets/images/Tom-09web.jpg",
-		"title": "Photoshoot Fun",
+		"src": "assets/images/9.jpg",
+		"title": "Singing Perry Como's 'It's Impossible'",
 		"info": "Some info for pic 5"
 	},
 	{
-		"src": "assets/images/cray.jpg",
-		"title": "Performing at Laff's",
-		"info": "Some info for pic 6"
+		"src": "assets/images/2.jpg",
+		"title": "Singing Frank Sinatra's 'Witchcraft'",
+		"info": "Some info for pic 5"
+	},
+	{
+		"src": "assets/images/3.jpg",
+		"title": "Singing Charlie Chaplin's 'Smile'",
+		"info": "Some info for pic 5"
+	},
+	{
+		"src": "assets/images/6.jpg",
+		"title": "Singing Nora Jones 'Don't Know Why'",
+		"info": "Some info for pic 5"
+	},
+	{
+		"src": "assets/images/7.jpg",
+		"title": "Singing Antonio Carlos Jobim's 'The Girl from Ipanema'",
+		"info": "Some info for pic 5"
+	},
+	{
+		"src": "assets/images/3.jpg",
+		"title": "Thanking the crowd",
+		"info": "Some info for pic 5"
 	}
 ]
