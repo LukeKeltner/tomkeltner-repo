@@ -19,7 +19,7 @@ $.ajax(
 
 	var picNumber = 0;
 
-/*	var newDeck = $('<div class="card-deck">')
+/*	var newDeck = $('<div class="card-columns">')
 	for (var i=0; i<data.length; i++)
 	{
 		var newCard = $("<div class='card text-white bg-dark text-center' index='"+picNumber+"'>"
