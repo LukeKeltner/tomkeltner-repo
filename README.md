@@ -1,5 +1,16 @@
 # tomkeltner-repo
-A stanrdard website created from scratch to promote Tom Keltner's singing biogrophy.
-Features include
+A standard website created from scratch to promote Tom Keltner's singing biography.
+Features include:
 * Home page
-* Song List - searchable table of songs by iehter title, composer/lyrisist, genre, and/or year.
+* Song List - searchable table of songs by either title, composer/lyricist, genre, and/or year.
+* Prices for services
+* Photos
+* References
+* Contact
+
+Technologies implemented include:
+* node/express
+* fs-extra
+* nodemailer
+* Song list JSON and picture JSON files for easy data updates
+* Bootstrap for mobile friendly use
