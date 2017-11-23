@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Libre+Baskerville" rel="stylesheet">
+	<link href="assets/css/index.css" rel="stylesheet"/>
+	<link href="assets/css/references.css" rel="stylesheet" />
+	<title>Edit Songs</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row text-center" style="align-items:center;" id="logo">
+			<div class="col-sm-2">
+
+			</div>
+			<div class="col-sm-8 pull-left">
+				<p id="tkstc">Edit Songs</p>
+			</div>
+			<div class="col-sm-2">
+				<img src="assets/images/mic.png" id="mic"/>
+			</div>
+			<!-- <img id="hat" class="pull-right" src="assets/images/fedora.png"/> -->
+		</div>
+		<div class="row text-center" id="options">
+			<div class="col-sm-12">
+				<div id="options-text">
+					<a href="/"><button type="button" class="btn btn-outline-light options">Home</button></a>
+					<a href="thesonglist"><button type="button" class="btn btn-outline-light options">The Song List</button></a>
+					<a href="pricing"><button type="button" class="btn btn-outline-light options">Pricing</button></a>
+					<a href="gallery"><button type="button" class="btn btn-outline-light options">Photos</button></a>
+					<a href="references"><button type="button" class="btn btn-outline-light options">References</button></a>
+					<a href="contact"><button type="button" class="btn btn-outline-light options">Contact</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<table id="thesonglist-table" class="table table-hover table-dark table-bordered" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th scope="col">Title</th>
+						<th scope="col">Composer/Lyricist</th>
+						<th scope="col">Genre</th>
+						<th scope="col">Year</th>
+						<th scope="col">Delete</th>
+					</tr>
+				</thead>
+				<tbody  id="table-body">
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="col">Title</th>
+							<th scope="col">Composer/Lyricist</th>
+							<th scope="col">Genre</th>
+							<th scope="col">Year</th>
+							<th scope="col">Delete</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10">
+			</div>
+			<div class="col-md-2">
+				<button type="button" class="btn btn-primary" id="undo">Undo Last Delete</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Add a Song</h2>
+			</div>
+		</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<form action="/add" method="post" id="add">
+						  <div class="row">
+						    <div class="col-md-12 mb-3">
+						      <input type="text" class="form-control" id="title" placeholder="Title" required>
+						    </div>
+						  </div>		
+						  <div class="row">
+						    <div class="col-md-12 mb-3">
+						      <input type="text" class="form-control" id="composer" placeholder="Composer/Lyricist" required>
+						    </div>
+						  </div>
+						  <div class="row">
+						    <div class="col-md-12 mb-3">
+						      <input type="text" class="form-control" id="genre" placeholder="Genre" required>
+						    </div>
+						  </div>
+						  <div class="row">
+						    <div class="col-md-12 mb-3">
+						      <input type="number" class="form-control" id="year" placeholder="Year" required>
+						    </div>
+						  </div>
+
+						  <input type="submit" class="btn btn-outline-dark" value="Add!"></input>
+						</form>
+				</div>
+			</div>
+	</div>
+
+
+
+	<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/scripts/editsongs.js"></script>
+
+</body>
+</html>

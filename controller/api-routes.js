@@ -3,6 +3,8 @@ var path = require("path");
 var fs = require('fs-extra');
 var nodemailer = require('nodemailer');
 var songListPath = path.join(__dirname, "..", "data", "thesonglist.json");
+var songListTestPath = path.join(__dirname, "..", "data", "thesonglisttest.json");
+var undoSongListTest = path.join(__dirname, "..", "data", "undodeletesonglist.json");
 var galleryPath = path.join(__dirname, "..", "data", "gallery.json");
 
 var router = express.Router();
@@ -31,6 +33,78 @@ router.get("/api/thesonglist", function(req, res)
 	.catch(function(err)
 	{
 		console.log(err);
+	})
+})
+
+router.get("/api/thesonglisttest", function(req, res)
+{
+	fs.readJson(songListTestPath)
+	.then(function(list)
+	{
+		res.json(list);
+	})
+	.catch(function(err)
+	{
+		console.log(err);
+	})
+})
+
+router.delete("/api/delete", function(req, res)
+{
+	fs.readJson(songListTestPath)
+	.then(function(list)
+	{
+
+		fs.writeJson("./data/undodeletesonglist.json", list)
+
+		for (var i=0; i<list.length; i++)
+		{
+			if (req.body.title === list[i].title && req.body.year === list[i].year)
+			{
+				console.log(list)
+				list.splice(i, 1)
+				console.log(list)
+
+				fs.writeJson("./data/thesonglisttest.json", list)
+			}
+		}
+
+		res.end()
+	})
+	.catch(function(err)
+	{
+		console.log(err);
+	})
+})
+
+router.post("/api/addsong", function(req, res)
+{
+	console.log(req.body)
+	fs.readJson(songListTestPath)
+	.then(function(list)
+	{
+		list.push(req.body)
+
+		fs.writeJson(songListTestPath, list)
+
+		res.end()
+	})
+	.catch(function(err)
+	{
+		console.log(err);
+	})
+})
+
+router.post("/undo", function(req, res)
+{
+	fs.readJson(undoSongListTest)
+	.then(function(list)
+	{
+		fs.writeJson("./data/thesonglisttest.json", list)
+		res.end()
+	}).catch(function(err)
+	{
+		console.log(err)
 	})
 })
 
