@@ -1,6 +1,13 @@
+var loggedIn = sessionStorage.getItem("Tom")
+
+if (loggedIn !== 'true')
+{
+	window.location = "/tom"
+}
+
 $.ajax(
 {
-	url: '/api/thesonglisttest',
+	url: '/api/thesonglist',
 	type: 'GET'
 }).done(function(data)
 {
@@ -8,8 +15,17 @@ $.ajax(
 	var tBody = $('#table-body');
 	for (var i=0; i<data.length; i++)
 	{
-		insert = $("<tr><td>"+data[i].title+"</td><td>"+data[i].artist+"</td><td>"+data[i].genre+"</td><td>"+data[i].year+"</td>"+"<td><button type='button' class='btn btn-danger delete' data-title='"+data[i].title+"' data-year='"+data[i].year+"'>Delete</button></td></tr>")
-		tBody.append(insert)
+		if (data[i].dadadd)
+		{
+			insert = $("<tr style='background-color: green;'><td>"+data[i].title+"</td><td>"+data[i].artist+"</td><td>"+data[i].genre+"</td><td>"+data[i].year+"</td>"+"<td><button type='button' class='btn btn-danger delete' data-title='"+data[i].title+"' data-year='"+data[i].year+"'>Delete</button></td></tr>")
+			tBody.append(insert)
+		}
+
+		else
+		{
+			insert = $("<tr><td>"+data[i].title+"</td><td>"+data[i].artist+"</td><td>"+data[i].genre+"</td><td>"+data[i].year+"</td>"+"<td><button type='button' class='btn btn-danger delete' data-title='"+data[i].title+"' data-year='"+data[i].year+"'>Delete</button></td></tr>")
+			tBody.append(insert)			
+		}
 	}
 
 	 $('#thesonglist-table').DataTable();
@@ -57,7 +73,8 @@ $("#add").on("submit", function(event)
 		title: $("#title").val(),
 		artist: $("#composer").val(),
 		genre: $('#genre').val(),
-		year: $('#year').val()
+		year: $('#year').val(),
+		dadadd: true
 	}
 
 	console.log(data)

@@ -5,7 +5,6 @@ var router = express.Router();
 router.get("/:location?", function(req, res)
 {
 	var chosen = req.params.location;
-	console.log("Hey!!!!!!!!!!")
 
 	if (chosen === "thesonglist")
 	{
@@ -35,6 +34,11 @@ router.get("/:location?", function(req, res)
 	else if (chosen === "editsongs")
 	{
 		res.sendFile(path.join(__dirname, "..", "public", "editsongs.html"));
+	}
+
+	else if (chosen === "tom")
+	{
+		res.sendFile(path.join(__dirname, "..", "public", "tom.html"));
 	}
 
 	else

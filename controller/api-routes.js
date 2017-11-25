@@ -27,7 +27,6 @@ router.get("/api/thesonglist", function(req, res)
 	fs.readJson(songListPath)
 	.then(function(list)
 	{
-		console.log(list)
 		res.json(list);
 	})
 	.catch(function(err)
@@ -51,7 +50,7 @@ router.get("/api/thesonglisttest", function(req, res)
 
 router.delete("/api/delete", function(req, res)
 {
-	fs.readJson(songListTestPath)
+	fs.readJson(songListPath)
 	.then(function(list)
 	{
 
@@ -61,11 +60,11 @@ router.delete("/api/delete", function(req, res)
 		{
 			if (req.body.title === list[i].title && req.body.year === list[i].year)
 			{
-				console.log(list)
+				console.log("deleteing...")
+				console.log(list[i].title)
 				list.splice(i, 1)
-				console.log(list)
 
-				fs.writeJson("./data/thesonglisttest.json", list)
+				fs.writeJson("./data/thesonglist.json", list)
 			}
 		}
 
@@ -79,13 +78,12 @@ router.delete("/api/delete", function(req, res)
 
 router.post("/api/addsong", function(req, res)
 {
-	console.log(req.body)
-	fs.readJson(songListTestPath)
+	fs.readJson(songListPath)
 	.then(function(list)
 	{
 		list.push(req.body)
 
-		fs.writeJson(songListTestPath, list)
+		fs.writeJson(songListPath, list)
 
 		res.end()
 	})
@@ -100,7 +98,7 @@ router.post("/undo", function(req, res)
 	fs.readJson(undoSongListTest)
 	.then(function(list)
 	{
-		fs.writeJson("./data/thesonglisttest.json", list)
+		fs.writeJson("./data/thesonglist.json", list)
 		res.end()
 	}).catch(function(err)
 	{
@@ -113,7 +111,6 @@ router.get("/api/gallery", function(req, res)
 	fs.readJson(galleryPath)
 	.then(function(list)
 	{
-		console.log(list)
 		res.json(list);
 	})
 	.catch(function(err)
@@ -124,7 +121,6 @@ router.get("/api/gallery", function(req, res)
 
 router.post("/submit", function(req, res)
 {
-	console.log(req.body)
 
 	var message = req.body.message+"\n"
 	+"Contact's Name: "+req.body.name+"\n"
@@ -148,10 +144,22 @@ router.post("/submit", function(req, res)
 
 		else 
 		{
-			console.log('Email sent: ' + info.response);
 			res.send("")
 		}
 	});
+})
+
+router.get("/api/:password", function(req, res)
+{
+	if (req.params.password === '2961044')
+	{
+		res.send("correct")
+	}
+
+	else
+	{
+		res.send("wrong")
+	}
 })
 
 module.exports = router;
