@@ -14,3 +14,7 @@ $.ajax(
 
 	 $('#thesonglist-table').DataTable();
 })
+
+var c = document.getElementById("thesonglist-table_filter").children;
+c[0].innerHTML = "Search for a Song:"
+
