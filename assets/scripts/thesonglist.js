@@ -14,8 +14,9 @@ $.ajax(
 
 	 $('#thesonglist-table').DataTable();
 
-	var c = document.getElementById("thesonglist-table_filter").children;
-	c[0].innerHTML = "Search for a Song:"
+	//var c = document.getElementById("thesonglist-table_filter").children;
+	//c[0].innerHTML = 'Search for a Song:	<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="thesonglist-table">'
+
 })
 
 
